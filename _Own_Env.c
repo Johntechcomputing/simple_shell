@@ -1,14 +1,5 @@
 #include "Shell.h"
 
-/*extern char **Environment;*/
-
-/*char *Environment[] = {
-	"PATH=/bin:/usr/bin",
-	"HOME=/home/user",
-	NULL
-};*/
-
-/**
  * _Own_Env - Function to print enviromental variables
  * @args: Arguments
  *
