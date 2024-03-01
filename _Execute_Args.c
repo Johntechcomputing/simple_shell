@@ -30,7 +30,8 @@ int _Execute_Args(char **args)
 	{
 		if (strcmp(args[0], Builtin_Functions_List[i]) == 0)
 		{
-			return ((*Builtin_Functions[i])(args));
+			(*Builtin_Functions[i])(args);
+			return (0);
 		}
 	}
 	return (_New_Process(args));

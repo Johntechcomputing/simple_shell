@@ -8,22 +8,16 @@
  */
 int _Own_Exit(char **args)
 {
-	int Status_Code;
+	int Status_Code = 0;
 
 	if (args[1] != NULL)
 	{
 		Status_Code = atoi(args[1]);
-		if (Status_Code >= 0 && Status_Code <= 255)
-		{
-			exit(Status_Code);
-		}
-		else
+		if (Status_Code < 0 || Status_Code > 255)
 		{
 			printf("Invalid exit status code\n");
+			Status_Code = 1;
 		}
 	}
-	else
-	{
-		exit(0);
-	}
+	exit(Status_Code);
 }
